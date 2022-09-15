@@ -1,4 +1,9 @@
 module.exports = {
+  rules: {
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["off"],
+    "no-undef": ["off"]
+  },
   root: true,
   env: {
     browser: true,
@@ -13,9 +18,5 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 2021,
-  },
-  env:{
-    // https://eslint.vuejs.org/user-guide/#faq
-    'vue/setup-compiler-macros': true
   }
 }
