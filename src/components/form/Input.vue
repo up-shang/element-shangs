@@ -1,10 +1,6 @@
 <template>
   <div>
-    <input
-      :value="modelValue"
-      class="el-input--inner"
-      @input="onInput"
-    >
+    <input :value="modelValue" class="el-input--inner" @input="onInput">
   </div>
 </template>
 <script lang="ts">

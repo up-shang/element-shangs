@@ -20,6 +20,6 @@ describe('按钮测试', () => {
     })
     // size内部通过class控制
     expect(wrapper.classes()).toContain('el-button--small')
-  })  
+  })
 
 })
