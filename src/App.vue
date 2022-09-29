@@ -1,14 +1,30 @@
 <template>
-  <el-form ref="myForm" :model="model" :rules="rules">
-    <el-form-item label="用户名：" prop="username">
+  <el-form
+    ref="myForm"
+    :model="model"
+    :rules="rules"
+  >
+    <el-form-item
+      label="用户名："
+      prop="username"
+    >
       <el-input v-model="model.username" />
     </el-form-item>
-    <el-form-item label="密码：" prop="password">
-      <el-input v-model="model.password" type="password" />
+    <el-form-item
+      label="密码："
+      prop="password"
+    >
+      <el-input
+        v-model="model.password"
+        type="password"
+      />
     </el-form-item>
     <br>
     <el-form-item>
-      <el-button type="primary" @click="login">
+      <el-button
+        type="primary"
+        @click="login"
+      >
         登 录
       </el-button>
     </el-form-item>
