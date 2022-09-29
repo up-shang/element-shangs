@@ -6,7 +6,7 @@
 
 <script lang="ts">
 export default {
-  name:'ElMain'
+  name: 'ElMain'
 }
 </script>
 
@@ -14,6 +14,7 @@ export default {
 </script>
 <style lang="scss">
 @import '../../styles/mixin.scss';
+
 @include b(main) {
   display: block;
   flex: 1;
@@ -22,5 +23,4 @@ export default {
   box-sizing: border-box;
   padding: $--main-padding;
 }
-
 </style>
