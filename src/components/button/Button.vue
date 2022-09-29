@@ -1,8 +1,11 @@
 <template>
-  <button class="el-button" :class="[
-    buttonSize ? `el-button--${buttonSize}` : '',
-    type ? `el-button--${type}` : ''
-  ]">
+  <button
+    class="el-button"
+    :class="[
+      buttonSize ? `el-button--${buttonSize}` : '',
+      type ? `el-button--${type}` : ''
+    ]"
+  >
     <slot />
   </button>
 </template>
@@ -15,14 +18,14 @@ export default {
 
 <script setup lang="ts">
 import { computed, withDefaults } from 'vue'
-import { useGlobalConfig } from '../../util';
+import { useGlobalConfig } from '../../util'
 interface Props {
-  size?: "" | 'small' | 'medium' | 'large',
-  type?: "" | 'primary' | 'success' | 'danger'
+  size?: '' | 'small' | 'medium' | 'large',
+  type?: '' | 'primary' | 'success' | 'danger'
 }
 const props = withDefaults(defineProps<Props>(), {
-  size: "",
-  type: ""
+  size: '',
+  type: ''
 })
 const globalConfig = useGlobalConfig()
 const buttonSize = computed(() => {

@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   globals: {
     defineEmits: 'readonly',
-    defineProps: 'readonly',
+    defineProps: 'readonly'
   },
   extends: [
     'plugin:@typescript-eslint/recommended',
@@ -11,7 +11,10 @@ module.exports = {
   ],
   parserOptions: {
     parser: '@typescript-eslint/parser',
-    ecmaVersion: 2020,
+    ecmaVersion: 2020
+  },
+  env: {
+    node: true
   },
   rules: {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off', // 禁用 debugger
@@ -22,10 +25,16 @@ module.exports = {
     indent: [
       'error',
       2,
-      { MemberExpression: 0, SwitchCase: 1, ignoredNodes: ['TemplateLiteral'] },
+      { MemberExpression: 0, SwitchCase: 1, ignoredNodes: ['TemplateLiteral'] }
     ], // 强制使用一致的缩进
     quotes: ['error', 'single'], // 强制使用一致的反勾号、双引号或单引号
-    'comma-dangle': ['error', 'always-multiline'], // 要求或禁止末尾逗号
+    'comma-dangle': ['error', {
+      'arrays': 'never',
+      'objects': 'never',
+      'imports': 'never',
+      'exports': 'never',
+      'functions': 'ignore'
+    }], // 要求或禁止末尾逗号
     'object-curly-spacing': ['error', 'always'], // 强制在大括号中使用一致的空格
     'max-len': ['error', 120], // 强制一行的最大长度
     'no-new': 'off', // 禁止使用 new 以避免产生副作用
@@ -74,16 +83,10 @@ module.exports = {
     'vue/max-attributes-per-line': [ // 强制每行属性的最大数量
       'warn',
       {
-        singleline: {
-          max: 3,
-          allowFirstLine: true,
-        },
-        multiline: {
-          max: 1,
-          allowFirstLine: false,
-        },
-      },
+        singleline: 3,
+        multiline: 1
+      }
     ],
-    'vue/singleline-html-element-content-newline': 'off', // 要求单行元素的内容前后有一个换行符
+    'vue/singleline-html-element-content-newline': 'off' // 要求单行元素的内容前后有一个换行符
   }
 }

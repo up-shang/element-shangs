@@ -56,23 +56,23 @@ import { ref, reactive } from 'vue'
 import { FormType } from './components/form/type'
 
 const model = reactive({
-  username: "",
-  password: "",
+  username: '',
+  password: ''
 })
 
 const rules = reactive({
   username: [
     {
       required: true,
-      message: "请输入用户名！",
-    },
+      message: '请输入用户名！'
+    }
   ],
   password: [
     {
       required: true,
-      message: "请输入密码！",
-    },
-  ],
+      message: '请输入密码！'
+    }
+  ]
 })
 
 // 获取表单实例
@@ -82,7 +82,7 @@ const login = () => {
     if (isValid) {
       console.log(model)
     } else {
-      alert("请正确填写表单！")
+      alert('请正确填写表单！')
     }
   })
 }

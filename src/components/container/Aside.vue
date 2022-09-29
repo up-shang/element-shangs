@@ -15,7 +15,7 @@ type PropValues = {
   width: string
 }
 withDefaults(defineProps<PropValues>(), {
-  width: "300px"
+  width: '300px'
 })
 </script>
 

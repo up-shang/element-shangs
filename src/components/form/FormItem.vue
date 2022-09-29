@@ -14,10 +14,10 @@ export default {
 </script>
 
 <script setup lang="ts">
-import Schema from "async-validator"
-import { onMounted, ref, inject } from "vue"
-import { FormItem, key } from './type';
-import { emitter } from "../../emitter"
+import Schema from 'async-validator'
+import { onMounted, ref, inject } from 'vue'
+import { FormItem, key } from './type'
+import { emitter } from '../../emitter'
 
 interface Props {
   label?: string,
