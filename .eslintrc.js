@@ -62,7 +62,9 @@ module.exports = {
     'import/named': 'off', // 确保命名导入与远程文件中的命名导出相对应
     'object-curly-newline': 'off', // 强制大括号内换行符的一致性
     'default-case': 'off', // 要求 switch 语句中有 default 分支
-    'no-trailing-spaces': 'off', // 禁用行尾空格
+    'no-multi-spaces': 'error', // 禁止多余空格
+    'no-trailing-spaces': 'error', // 禁用行尾空格
+    'keyword-spacing': ['error', { 'before': true }], // 关键字前必须有至少一个空格
     'func-names': 'off', // 要求或禁止使用命名的 function 表达式
     radix: 'off', // 强制在 parseInt() 使用基数参数
     'no-unused-expressions': 'off', // 禁止出现未使用过的表达式
