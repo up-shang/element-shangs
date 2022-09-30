@@ -85,13 +85,13 @@ module.exports = {
     'class-methods-use-this': 'off', // 强制类方法使用 this
     'vue/html-indent': ['error', 2], // 在<template>中强制一致缩进
     'vue/html-self-closing': 'off', // 执行自闭合的风格
-    // 'vue/max-attributes-per-line': [ // 强制每行属性的最大数量
-    //   'warn',
-    //   {
-    //     singleline: 3,
-    //     multiline: 1
-    //   }
-    // ],
+    'vue/max-attributes-per-line': [ // 强制每行属性的最大数量
+      'warn',
+      {
+        singleline: 3,
+        multiline: 1
+      }
+    ],
     'vue/singleline-html-element-content-newline': 'off' // 要求单行元素的内容前后有一个换行符
   }
 }
