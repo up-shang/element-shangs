@@ -67,7 +67,7 @@ module.exports = {
     'no-trailing-spaces': 'error', // 禁用行尾空格
     'keyword-spacing': ['error', { 'before': true }], // 关键字前必须有至少一个空格
     'space-before-function-paren': ['error', 'always'], // function圆括号两端必须有至少一个空格
-    'newline-per-chained-call': ['error', { 'ignoreChainWithDepth': 1 }], // 要求方法链中每个调用都有一个换行符
+    'newline-per-chained-call': ['error', { 'ignoreChainWithDepth': 2 }], // 要求方法链中每个调用都有一个换行符
     'func-names': 'off', // 要求或禁止使用命名的 function 表达式
     radix: 'off', // 强制在 parseInt() 使用基数参数
     'no-unused-expressions': 'off', // 禁止出现未使用过的表达式
