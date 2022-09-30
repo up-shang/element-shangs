@@ -4,7 +4,7 @@ import ElFormItem from './FormItem.vue'
 import ElInput from './Input.vue'
 
 export default {
-  install(app: App) {
+  install (app: App) {
     app.component(ElForm.name, ElForm)
     app.component(ElFormItem.name, ElFormItem)
     app.component(ElInput.name, ElInput)

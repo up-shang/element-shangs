@@ -26,7 +26,7 @@ module.exports = {
     indent: [
       'error',
       2,
-      { MemberExpression: 1, SwitchCase: 1, ignoredNodes: ['TemplateLiteral'] }
+      { MemberExpression: 0, SwitchCase: 1, ignoredNodes: ['TemplateLiteral'] }
     ], // 强制使用一致的缩进
     quotes: ['error', 'single'], // 强制使用一致的反勾号、双引号或单引号
     'comma-dangle': ['error', {
@@ -85,13 +85,13 @@ module.exports = {
     'class-methods-use-this': 'off', // 强制类方法使用 this
     'vue/html-indent': ['error', 2], // 在<template>中强制一致缩进
     'vue/html-self-closing': 'off', // 执行自闭合的风格
-    'vue/max-attributes-per-line': [ // 强制每行属性的最大数量
-      'warn',
-      {
-        singleline: 3,
-        multiline: 1
-      }
-    ],
+    // 'vue/max-attributes-per-line': [ // 强制每行属性的最大数量
+    //   'warn',
+    //   {
+    //     singleline: 3,
+    //     multiline: 1
+    //   }
+    // ],
     'vue/singleline-html-element-content-newline': 'off' // 要求单行元素的内容前后有一个换行符
   }
 }

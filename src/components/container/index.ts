@@ -6,7 +6,7 @@ import ElAside from './Aside.vue'
 import ElMain from './Main.vue'
 
 export default {
-  install(app: App) {
+  install (app: App) {
     app.component(ElContainer.name, ElContainer)
     app.component(ElHeader.name, ElHeader)
     app.component(ElFooter.name, ElFooter)
