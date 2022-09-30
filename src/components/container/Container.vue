@@ -17,10 +17,11 @@ const props = defineProps<Props>()
 const slots = useSlots()
 const isVertical = computed(() => {
   if (slots && slots.default) {
-    return slots.default().some((vn: VNode) => {
-      const tag = (vn.type as Component).name
-      return tag === 'ElHeader' || tag === 'ElFooter'
-    })
+    return slots.default()
+      .some((vn: VNode) => {
+        const tag = (vn.type as Component).name
+        return tag === 'ElHeader' || tag === 'ElFooter'
+      })
   } else {
     return props.direction === 'is-vertical'
   }

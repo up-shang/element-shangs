@@ -30,9 +30,11 @@ const items = ref<FormItem[]>([])
 
 emitter.on('addFormItem', (item) => { items.value.push(item) })
 
-function validate(cb: (isValid: boolean) => void) {
+function validate (cb: (isValid: boolean) => void) {
   const tasks = items.value.map(item => item.validate())
-  Promise.all(tasks).then(() => { cb(true) }).catch(() => { cb(false) })
+  Promise.all(tasks)
+    .then(() => { cb(true) })
+    .catch(() => { cb(false) })
 }
 
 defineExpose({

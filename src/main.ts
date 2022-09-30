@@ -8,4 +8,7 @@ const app = createApp(App)
 app.config.globalProperties.$AILEMENTE = {
   size: 'large'
 }
-app.use(ElContainer).use(ElButton).use(ElForm).mount('#app')
+app.use(ElContainer)
+  .use(ElButton)
+  .use(ElForm)
+  .mount('#app')

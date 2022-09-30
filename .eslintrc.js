@@ -14,7 +14,8 @@ module.exports = {
     ecmaVersion: 2020
   },
   env: {
-    node: true
+    node: true,
+    jest: true
   },
   rules: {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off', // 禁用 debugger
@@ -25,7 +26,7 @@ module.exports = {
     indent: [
       'error',
       2,
-      { MemberExpression: 0, SwitchCase: 1, ignoredNodes: ['TemplateLiteral'] }
+      { MemberExpression: 1, SwitchCase: 1, ignoredNodes: ['TemplateLiteral'] }
     ], // 强制使用一致的缩进
     quotes: ['error', 'single'], // 强制使用一致的反勾号、双引号或单引号
     'comma-dangle': ['error', {
@@ -65,6 +66,8 @@ module.exports = {
     'no-multi-spaces': 'error', // 禁止多余空格
     'no-trailing-spaces': 'error', // 禁用行尾空格
     'keyword-spacing': ['error', { 'before': true }], // 关键字前必须有至少一个空格
+    'space-before-function-paren': ['error', 'always'], // function圆括号两端必须有至少一个空格
+    'newline-per-chained-call': ['error', { 'ignoreChainWithDepth': 1 }], // 要求方法链中每个调用都有一个换行符
     'func-names': 'off', // 要求或禁止使用命名的 function 表达式
     radix: 'off', // 强制在 parseInt() 使用基数参数
     'no-unused-expressions': 'off', // 禁止出现未使用过的表达式
@@ -77,7 +80,7 @@ module.exports = {
     'template-curly-spacing': ['error', 'always'], // 要求或禁止模板字符串中的嵌入表达式周围空格的使用
     '@typescript-eslint/no-var-requires': 'off', // 除import语句外，禁止使用require语句
     '@typescript-eslint/no-empty-function': 'off', // 不允许空函数
-    // '@typescript-eslint/no-explicit-any': 'off', // 禁止使用 any 类型
+    '@typescript-eslint/no-explicit-any': 'off', // 禁止使用 any 类型
     'guard-for-in': 'off', // 要求 for-in 循环中有一个 if 语句
     'class-methods-use-this': 'off', // 强制类方法使用 this
     'vue/html-indent': ['error', 2], // 在<template>中强制一致缩进

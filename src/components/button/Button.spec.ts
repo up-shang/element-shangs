@@ -9,7 +9,8 @@ describe('按钮测试', () => {
         default: content
       }
     })
-    expect(wrapper.text()).toBe(content)
+    expect(wrapper.text())
+      .toBe(content)
   })
   it('通过size属性控制大小', () => {
     const size = 'small'
@@ -19,7 +20,8 @@ describe('按钮测试', () => {
       }
     })
     // size内部通过class控制
-    expect(wrapper.classes()).toContain('el-button--small')
+    expect(wrapper.classes())
+      .toContain('el-button--small')
   })
 
 })

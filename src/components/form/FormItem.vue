@@ -43,7 +43,7 @@ onMounted(() => {
   }
   emitter.emit('addFormItem', o)
 })
-function validate() {
+function validate () {
   if (formData?.rules === undefined) {
     return Promise.resolve({ result: true })
   }
